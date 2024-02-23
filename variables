@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#How to declare variables and call them
+#Variable names are declared without any space between the variable name, equals sign and value
+name=kdarks
+
+echo $name
+
+#after declaring a variable, it's value can be changed as shown below
+title=mamaba
+echo $title
+
+title=junior
+echo $title
+
