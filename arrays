@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Working with Arrays in bash
+#Arrays are zero-based ie indexing starts at 0.
+Places=(Accra Labadi 37 Legon)
+
+#Access all items in an array by using ${Array[@]}
+echo "Places is an array with elements  ${Places[@]}"
+
+
+#List indexes of all items ${!Array[@]}
+echo "The index of elements in Places: ${!Places[@]}"
+
+#Access specific item in an array using index by using ${Array[index]}
+echo "Index 0 of Places is ${Places[0]}"
+echo "Index 1 of Places is ${Places[1]}"
+echo "Index 2 of Places is ${Places[2]}"
+echo "Index 3 of Places is ${Places[3]}"
+

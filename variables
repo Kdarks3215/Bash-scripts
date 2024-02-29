@@ -13,3 +13,5 @@ echo $title
 title=junior
 echo $title
 
+title=3
+echo $title

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Working with String variables in Bash
+
+Greeting="Akwaaba Abusuafo!"
+
+#Printouts Greetings
+echo ${Greeting}
+
+#Printout Greetings translated into uppercase
+echo ${Greeting} | tr a-z A-Z
+
+#Substitute  "Abusuafo in Greeting to Anuanom"
+echo ${Greeting/Abusuafo/Anuanom}

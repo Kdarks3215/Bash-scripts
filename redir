@@ -1,0 +1,59 @@
+#!/bin/bash
+#Redirectiors in bash
+
+echo "> redirects input to a file. Overwrites the file if it already exists"
+#Redirects std output to a new file
+echo "I'm learning Bash" > new.txt
+
+#show contents of new file
+cat new.txt
+
+#Redirect today's date to already exisitng file new.txt
+echo "Today is `date`" > new.txt
+
+#show contents of new.txt
+cat new.txt
+
+echo -e "\n"
+echo  ">> redirects to a file. Appends new info to already exisiting file "
+#Redirect using >>
+ls >> new.txt
+
+#show contents of new.txt
+cat new.txt
+
+echo -e "\n"
+echo  "Using 2> to redirect errors outputs to a file"
+cat new.txt
+ls /etc/game 2>> new.txt
+echo -e "\n" 
+cat new.txt
+
+echo -e "\n"
+echo "Using &> to redirect both errors and std ouput"
+ls /etc/ssh /etc/blue &>> new.txt
+cat new.txt
+
+echo -e "\n"
+echo "Redirecting input using <"
+#new.txt is used as a input source for tr command and redirected to a new file called upper
+tr a-z A-Z < new.txt >upper
+cat upper
+
+echo  -e "\n"
+echo "Piping |"
+#Pass std output to next command as input
+cat upper |wc 
+
+#use piping to sort
+echo -e "John\nAbel\nMicheal\nErnest\nSimon" > names
+cat names |sort
+
+echo -e "\n"
+echo "Using piping to search for a specific file"
+cat names | grep "Abel"
+
+ls /etc | grep "passwd"
+
+
+

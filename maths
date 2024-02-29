@@ -1,0 +1,44 @@
+#!/bin/bash
+#Basic arithmetic operations in bash
+echo 'Bash arithmetics works on only integers'
+
+echo "Using (())"
+#Works for all basic operations
+num=$((2024 / 4))
+echo $num
+
+x=$((90*9))
+echo $x
+
+y=$((50+90))
+echo $y
+
+z=$((100-200))
+echo $z
+
+
+echo "Using expr"
+#`` to escape terminal
+a=7
+b=2
+c=`expr $a / $b`
+d=`expr $a - $b`
+e=`expr $a + $b`
+
+#for multiplaction \ is used before * sign  because * is a glob character
+
+f=`expr $a \* $b`
+echo "a =$a, b = $b"
+echo "Sum of a and b is $e"
+echo "Difference between a and b is $d"
+echo "a divided by b is $c"
+echo "a multiplied by b is $f"
+
+#expr can also be used without declaring variables
+j=`expr 5 \* 4`
+echo $j
+
+#Using bc
+echo "Expressions to be calculated can be piped to bc"
+echo "19 - 2 | bc"
+echo "19 * 2" | bc
